@@ -1,8 +1,7 @@
 import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
 import Container from '@kitconcept/volto-light-theme/components/Atoms/Container/Container';
-
-
+import { ShowBookmarksContentButton } from '@plone-collective/volto-bookmarks/components';
 import {
   Anontools,
   LanguageSelector,
@@ -32,10 +31,9 @@ const Header = (props) => {
           </div>
           <div className="tools-wrapper">
             <LanguageSelector />
-
             <div className="tools">
               {!token && <Anontools />}
-
+              {token && <ShowBookmarksContentButton />}
             </div>
           </div>
         </div>
