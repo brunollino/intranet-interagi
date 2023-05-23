@@ -5,12 +5,13 @@
            zope.lifecycleevent.IObjectAddedEvent"
       handler=".area.added"
       />
-
   <subscriber
       for="intranet_interagi.content.area.IArea
            zope.lifecycleevent.IObjectModifiedEvent"
       handler=".area.modified"
       />
-
-
+  <subscriber
+      for="Products.PluggableAuthService.interfaces.events.IUserLoggedInEvent"
+      handler=".post_login.login_handler"
+      />
 </configure>
